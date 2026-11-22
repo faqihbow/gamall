@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ridwan Rotan Cirebon</title>
+    <meta name="description" content="Website resmi bisnis ekspor rotan Pak Ridwan di Cirebon. Cek stok, harga, ongkir, dan estimasi tiba.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%AA%91%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body data-halaman="beranda">
+<nav class="navbar navbar-expand-lg navbar-situs sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#beranda"><svg class="logo-kursi" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><defs><clipPath id="sandaranRotan"><circle cx="16" cy="10.5" r="8.5"/></clipPath></defs><g clip-path="url(#sandaranRotan)" stroke="currentColor" stroke-width="1" opacity="0.55" fill="none"><path d="M-10 0L22 32M-5 0L27 32M0 0L32 32M5 0L37 32M10 0L42 32M15 0L47 32M20 0L52 32"/><path d="M10 0L-22 32M15 0L-17 32M20 0L-12 32M25 0L-7 32M30 0L-2 32M35 0L3 32M40 0L8 32"/></g><circle cx="16" cy="10.5" r="8.5" fill="none" stroke="currentColor" stroke-width="2.2"/><rect x="5" y="19.5" width="22" height="4" rx="2" fill="currentColor"/><path d="M8 23.5L6 30M24 23.5L26 30M13 23.5V29M19 23.5V29" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg><span>Ridwan Rotan</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuUtama" aria-controls="menuUtama" aria-expanded="false" aria-label="Buka menu" data-i18n-aria-label="nav.buka">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuUtama">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#beranda" data-i18n="nav.beranda">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#produk" data-i18n="nav.produk">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pesan" data-i18n="nav.pesan">Hitung pesanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kontak" data-i18n="nav.kontak">Kontak</a></li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <label class="visually-hidden" for="pilihBahasa" data-i18n="bahasa.label">Bahasa</label>
+                        <select class="form-select form-select-sm pilih-bahasa" id="pilihBahasa">
+                            <option value="id">Bahasa Indonesia</option>
+                            <option value="en">English</option>
+                            <option value="ja">日本語</option>
+                            <option value="zh">中文</option>
+                            <option value="ru">Русский</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="halaman" data-page="beranda">
+<header class="hero anyaman">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7">
+                    <h1 data-i18n="hero.judul">Rotan Cirebon, langsung dari pengrajin ke tujuan Anda.</h1>
+                    <p class="lead mt-3" data-i18n="hero.lead">Ridwan Rotan Cirebon mengekspor furnitur, anyaman, dan bahan baku rotan. Di sini Anda bisa mengecek stok, menghitung total harga, ongkir, dan estimasi tiba tanpa menunggu balasan chat.</p>
+                    <div class="d-flex flex-wrap gap-2 mt-4">
+                        <a class="btn btn-madu btn-lg" href="#pesan" data-i18n="hero.tombol1">Hitung pesanan</a>
+                        <a class="btn btn-outline-terang btn-lg" href="#produk" data-i18n="hero.tombol2">Lihat produk</a>
+                    </div>
+                    <p class="mt-4 mb-0"><i class="bi bi-check-circle"></i> <span id="teksReady">0 varian ready stock</span> &nbsp; <i class="bi bi-globe-asia-australia"></i> <span id="teksNegara">0 negara tujuan ekspor</span></p>
+                </div>
+                <div class="col-lg-5">
+                    <section class="panel-jawaban" aria-labelledby="judulJawaban">
+                        <h2 id="judulJawaban" data-i18n="jawab.judul">Pertanyaan calon klien, jawabannya ada di sini</h2>
+                        <ul class="daftar-jawaban mt-2">
+                            <li><a href="#produk"><i class="bi bi-box-seam ikon"></i><span><span data-i18n="jawab.1.t">Apakah produk ready?</span><small data-i18n="jawab.1.s">Cek stok setiap varian</small></span></a></li>
+                            <li><a href="#produk"><i class="bi bi-grid ikon"></i><span><span data-i18n="jawab.2.t">Apa saja variannya?</span><small data-i18n="jawab.2.s">Ukuran, warna, dan harganya</small></span></a></li>
+                            <li><a href="#pesan"><i class="bi bi-calculator ikon"></i><span><span data-i18n="jawab.3.t">Berapa total harganya?</span><small data-i18n="jawab.3.s">Dihitung otomatis dari jumlah pesanan</small></span></a></li>
+                            <li><a href="#pesan"><i class="bi bi-truck ikon"></i><span><span data-i18n="jawab.4.t">Berapa biaya pengiriman?</span><small data-i18n="jawab.4.s">Pilih negara dan metode kirim</small></span></a></li>
+                            <li><a href="#pesan"><i class="bi bi-calendar-check ikon"></i><span><span data-i18n="jawab.5.t">Berapa lama sampai?</span><small data-i18n="jawab.5.s">Perkiraan tanggal tiba</small></span></a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="seksi">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="judul-seksi" data-i18n="tentang.judul">Tentang bisnis kami</h2>
+                        <p class="teks-batas" data-i18n="tentang.p1">Kami berbasis di Cirebon, salah satu sentra kerajinan rotan terbesar di Indonesia. Pesanan kami kerjakan oleh pengrajin lokal, lalu dikemas dan dikirim ke pembeli di berbagai negara.</p>
+                        <p class="teks-batas mb-0" data-i18n="tentang.p2">Selama ini calon klien sering menanyakan hal yang sama lewat chat: stok, varian, harga, ongkir, dan lama pengiriman. Website ini dibuat agar semua jawabannya bisa dilihat langsung, kapan pun Anda butuh.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                            <div class="col-sm-6"><div class="kotak-fitur"><i class="bi bi-hammer"></i><h3 data-i18n="fitur.1.t">Dibuat pengrajin</h3><p data-i18n="fitur.1.p">Anyaman rapi dengan rotan pilihan dari Cirebon.</p></div></div>
+                            <div class="col-sm-6"><div class="kotak-fitur"><i class="bi bi-boxes"></i><h3 data-i18n="fitur.2.t">Stok terlihat</h3><p data-i18n="fitur.2.p">Status ready, terbatas, atau habis tampil per varian.</p></div></div>
+                            <div class="col-sm-6"><div class="kotak-fitur"><i class="bi bi-receipt"></i><h3 data-i18n="fitur.3.t">Harga transparan</h3><p data-i18n="fitur.3.p">Total dan ongkir dihitung otomatis sebelum Anda memesan.</p></div></div>
+                            <div class="col-sm-6"><div class="kotak-fitur"><i class="bi bi-globe-asia-australia"></i><h3 data-i18n="fitur.4.t">Kirim ke luar negeri</h3><p data-i18n="fitur.4.p">Lewat kapal laut atau pesawat sesuai kebutuhan.</p></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seksi seksi-putih">
+            <div class="container">
+                <div class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-4">
+                    <div>
+                        <h2 class="judul-seksi" data-i18n="unggulan.judul">Produk unggulan</h2>
+                        <p class="sub-seksi mb-0" data-i18n="unggulan.sub">Tiga produk yang paling sering dipesan klien.</p>
+                    </div>
+                    <a class="btn btn-outline-lumut" href="#produk" data-i18n="unggulan.semua">Semua produk</a>
+                </div>
+                <div class="row g-4" id="produkUnggulan"></div>
+            </div>
+        </section>
+
+        <section class="seksi">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-5">
+                        <h2 class="judul-seksi" data-i18n="cara.judul">Cara memesan</h2>
+                        <p class="sub-seksi" data-i18n="cara.sub">Empat langkah, tanpa perlu bertanya satu per satu.</p>
+                    </div>
+                    <div class="col-lg-7">
+                        <ol class="langkah">
+                            <li><h3 data-i18n="cara.1.t">Pilih produk dan varian</h3><p data-i18n="cara.1.p">Tambahkan produk ke daftar pesanan. Jumlah dibatasi sesuai stok.</p></li>
+                            <li><h3 data-i18n="cara.2.t">Pilih tujuan dan metode kirim</h3><p data-i18n="cara.2.p">Ongkir dan estimasi tiba menyesuaikan negara serta kapal laut atau pesawat.</p></li>
+                            <li><h3 data-i18n="cara.3.t">Periksa total pembayaran</h3><p data-i18n="cara.3.p">Subtotal, ongkir, dan total muncul otomatis.</p></li>
+                            <li><h3 data-i18n="cara.4.t">Kirim pesanan lewat WhatsApp</h3><p data-i18n="cara.4.p">Ringkasan pesanan terisi sendiri, tinggal Anda kirim ke Pak Ridwan.</p></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seksi anyaman text-white">
+            <div class="container text-center">
+                <h2 class="judul-seksi text-white" data-i18n="cta.judul">Siap menghitung pesanan Anda?</h2>
+                <p class="mx-auto mb-4" style="max-width: 50ch;" data-i18n="cta.p">Masukkan produk dan negara tujuan, lalu lihat total biayanya sekarang.</p>
+                <a class="btn btn-madu btn-lg" href="#pesan" data-i18n="cta.tombol">Mulai hitung pesanan</a>
+            </div>
+        </section>
+    </main>
+</div>
+<div class="halaman" data-page="produk" hidden>
+<header class="header-halaman anyaman">
+        <div class="container">
+            <h1 data-i18n="produk.h1">Produk rotan</h1>
+            <p data-i18n="produk.intro">Daftar produk beserta varian, harga, dan status stok. Klik Pesan pada varian yang ready untuk langsung menghitung pesanan.</p>
+        </div>
+    </header>
+
+    <main class="seksi">
+        <div class="container">
+            <div class="row g-3 mb-4">
+                <div class="col-md-5">
+                    <label class="form-label" for="cariProduk" data-i18n="cari.label">Cari produk</label>
+                    <input type="search" class="form-control" id="cariProduk" placeholder="Contoh: kursi, keranjang" data-i18n-placeholder="cari.ph">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" for="filterKategori" data-i18n="kategori.label">Kategori</label>
+                    <select class="form-select" id="filterKategori"></select>
+                </div>
+                <div class="col-md-3 d-flex align-items-end">
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="hanyaReady">
+                        <label class="form-check-label" for="hanyaReady" data-i18n="hanya.ready">Hanya yang ready</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4" id="daftarProduk"></div>
+            <p class="text-center text-muted py-5" id="produkKosong" hidden data-i18n="produk.kosong">Tidak ada produk yang cocok. Ubah kata kunci atau filter Anda.</p>
+        </div>
+    </main>
+</div>
+<div class="halaman" data-page="pesan" hidden>
+<header class="header-halaman anyaman">
+        <div class="container">
+            <h1 data-i18n="nav.pesan">Hitung pesanan</h1>
+            <p data-i18n="pesan.intro">Pilih produk, tentukan negara tujuan, lalu lihat total harga, ongkir, dan estimasi tiba secara otomatis.</p>
+        </div>
+    </header>
+
+    <main class="seksi">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-7">
+                    <section class="kartu-form mb-4" aria-labelledby="judulProduk">
+                        <h2 id="judulProduk" data-i18n="pesan.1">1. Pilih produk</h2>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label" for="selProduk" data-i18n="tbl.produk">Produk</label>
+                                <select class="form-select" id="selProduk"></select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label" for="selVarian" data-i18n="tbl.varian">Varian</label>
+                                <select class="form-select" id="selVarian"></select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label" for="inpJumlah" data-i18n="pesan.jumlah">Jumlah (unit)</label>
+                                <input type="number" class="form-control" id="inpJumlah" value="1" min="1" step="1">
+                            </div>
+                            <div class="col-md-8 d-flex align-items-end">
+                                <button type="button" class="btn btn-lumut w-100" id="btnTambah"><i class="bi bi-plus-lg"></i> <span data-i18n="pesan.tambah">Tambah ke pesanan</span></button>
+                            </div>
+                            <div class="col-12">
+                                <div class="info-varian" id="infoVarian" aria-live="polite"></div>
+                            </div>
+                        </div>
+                        <div class="alert py-2 mt-3 mb-0" id="pesanAlert" role="alert" hidden></div>
+                    </section>
+
+                    <section class="kartu-form" aria-labelledby="judulDaftar">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h2 class="mb-0" id="judulDaftar" data-i18n="pesan.daftar">Daftar pesanan</h2>
+                            <button type="button" class="btn btn-sm btn-outline-danger" id="btnKosongkan" hidden data-i18n="pesan.kosongkan">Kosongkan</button>
+                        </div>
+                        <p class="text-muted mb-0" id="keranjangKosong" data-i18n="pesan.kosong">Belum ada produk. Pilih produk di atas lalu klik Tambah ke pesanan.</p>
+                        <div class="table-responsive" id="wadahKeranjang" hidden>
+                            <table class="table align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th data-i18n="tbl.produk">Produk</th>
+                                        <th class="text-end" data-i18n="tbl.harga">Harga</th>
+                                        <th class="text-center" data-i18n="tbl.jumlah">Jumlah</th>
+                                        <th class="text-end" data-i18n="tbl.subtotal">Subtotal</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="badanKeranjang"></tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="ringkasan">
+                        <section class="kartu-form mb-4" id="tujuan" aria-labelledby="judulTujuan">
+                            <h2 id="judulTujuan" data-i18n="pesan.2">2. Tujuan dan pengiriman</h2>
+                            <div class="mb-3">
+                                <label class="form-label" for="selTujuan" data-i18n="pesan.negara">Negara tujuan</label>
+                                <select class="form-select" id="selTujuan"></select>
+                            </div>
+                            <fieldset class="pilihan-metode">
+                                <legend class="form-label fs-6" data-i18n="pesan.metode">Metode pengiriman</legend>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="metode" id="metodeLaut" value="laut" checked>
+                                    <label class="form-check-label" for="metodeLaut" data-i18n="pesan.laut">Kapal laut (lebih hemat, lebih lama)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="metode" id="metodeUdara" value="udara">
+                                    <label class="form-check-label" for="metodeUdara" data-i18n="pesan.udara">Pesawat udara (lebih cepat, lebih mahal)</label>
+                                </div>
+                            </fieldset>
+                        </section>
+
+                        <section class="kartu-form" id="ringkasan" aria-labelledby="judulRingkasan">
+                            <h2 id="judulRingkasan" data-i18n="pesan.3">3. Ringkasan biaya</h2>
+                            <dl>
+                                <div class="baris-ringkasan"><dt data-i18n="ring.subtotal">Subtotal produk</dt><dd id="outSubtotal">Rp 0</dd></div>
+                                <div class="baris-ringkasan"><dt data-i18n="ring.berat">Berat tagih</dt><dd id="outBerat">0 kg</dd></div>
+                                <div class="baris-ringkasan"><dt data-i18n="ring.ongkir">Ongkir</dt><dd id="outOngkir">-</dd></div>
+                                <div class="baris-ringkasan baris-total"><dt data-i18n="ring.total">Total</dt><dd id="outTotal">Rp 0</dd></div>
+                            </dl>
+                            <p class="small text-muted mt-2 mb-0" id="outTarif">Tambahkan produk terlebih dahulu.</p>
+
+                            <div class="kotak-estimasi">
+                                <span class="small" data-i18n="ring.estimasi">Perkiraan barang sampai</span>
+                                <strong id="outEstimasi">-</strong>
+                                <span class="small" id="outLamaHari"></span>
+                            </div>
+
+                            <hr>
+                            <div class="mb-3">
+                                <label class="form-label" for="inpNama" data-i18n="pesan.nama">Nama Anda</label>
+                                <input type="text" class="form-control" id="inpNama" autocomplete="name">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="inpCatatan" data-i18n="pesan.catatan">Catatan (opsional)</label>
+                                <textarea class="form-control" id="inpCatatan" rows="2"></textarea>
+                            </div>
+                            <div class="alert alert-danger py-2" id="peringatanWA" role="alert" hidden></div>
+                            <button type="button" class="btn btn-lumut w-100" id="btnWA"><i class="bi bi-whatsapp"></i> <span data-i18n="pesan.btnwa">Kirim pesanan lewat WhatsApp</span></button>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<div class="halaman" data-page="faq" hidden>
+<header class="header-halaman anyaman">
+        <div class="container">
+            <h1 data-i18n="faq.h1">Pertanyaan yang sering diajukan</h1>
+            <p data-i18n="faq.intro">Jawaban untuk hal-hal yang paling sering ditanyakan calon klien: stok, varian, harga, ongkir, dan lama pengiriman.</p>
+        </div>
+    </header>
+
+    <main class="seksi">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <label class="form-label" for="cariFaq" data-i18n="faq.cari.label">Cari pertanyaan</label>
+                    <input type="search" class="form-control mb-4" id="cariFaq" placeholder="Contoh: ongkir, stok, estimasi" data-i18n-placeholder="faq.cari.ph">
+                    <div class="accordion" id="accordionFaq"></div>
+                    <p class="text-center text-muted py-4" id="faqKosong" hidden data-i18n-html="faq.kosong">Pertanyaan tidak ditemukan. Silakan <a href="#kontak">hubungi kami</a> langsung.</p>
+                    <div class="kartu-form mt-4 text-center">
+                        <h2 class="fs-5" data-i18n="faq.lain">Masih ada pertanyaan lain?</h2>
+                        <a class="btn btn-lumut" data-wa-link href="#" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> <span data-i18n="faq.tanyawa">Tanya lewat WhatsApp</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<div class="halaman" data-page="kontak" hidden>
+<header class="header-halaman anyaman">
+        <div class="container">
+            <h1 data-i18n="footer.hubungi">Hubungi kami</h1>
+            <p data-i18n="kontak.intro">Untuk pesanan besar, model khusus, atau pertanyaan lain, kirim pesan langsung ke Pak Ridwan.</p>
+        </div>
+    </header>
+
+    <main class="seksi">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <section class="kartu-form h-100" aria-labelledby="judulInfo">
+                        <h2 id="judulInfo" data-i18n="kontak.info">Informasi bisnis</h2>
+                        <ul class="daftar-kontak">
+                            <li><i class="bi bi-person-badge"></i><span><span data-i18n="kontak.pemilik">Pemilik</span><small>Pak Ridwan</small></span></li>
+                            <li><i class="bi bi-whatsapp"></i><span>WhatsApp<small data-telepon></small></span></li>
+                            <li><i class="bi bi-geo-alt"></i><span><span data-i18n="kontak.alamat">Alamat</span><small>Jl. Industri Rotan No. 12, Plumbon, Kabupaten Cirebon, Jawa Barat</small></span></li>
+                            <li><i class="bi bi-clock"></i><span><span data-i18n="kontak.jamkerja">Jam kerja</span><small data-i18n="kontak.jam.val">Senin - Sabtu, 08.00 - 17.00 WIB</small></span></li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="col-lg-7">
+                    <section class="kartu-form" aria-labelledby="judulPesan">
+                        <h2 id="judulPesan" data-i18n="kontak.kirim">Kirim pesan</h2>
+                        <div class="mb-3">
+                            <label class="form-label" for="kontakNama" data-i18n="kontak.nama">Nama</label>
+                            <input type="text" class="form-control" id="kontakNama" autocomplete="name">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="kontakTopik" data-i18n="kontak.topik">Topik</label>
+                            <select class="form-select" id="kontakTopik">
+                                <option value="Pertanyaan produk" data-i18n="topik.1">Pertanyaan produk</option>
+                                <option value="Pesanan jumlah besar" data-i18n="topik.2">Pesanan jumlah besar</option>
+                                <option value="Model atau ukuran khusus" data-i18n="topik.3">Model atau ukuran khusus</option>
+                                <option value="Kerja sama distributor" data-i18n="topik.4">Kerja sama distributor</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="kontakPesan" data-i18n="kontak.pesan">Pesan</label>
+                            <textarea class="form-control" id="kontakPesan" rows="4"></textarea>
+                        </div>
+                        <div class="alert alert-danger py-2" id="kontakPeringatan" role="alert" hidden></div>
+                        <button type="button" class="btn btn-lumut" id="kontakKirim"><i class="bi bi-whatsapp"></i> <span data-i18n="kontak.btn">Kirim lewat WhatsApp</span></button>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer class="footer-situs anyaman">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-5">
+                    <h2>Ridwan Rotan Cirebon</h2>
+                    <p class="mb-0" data-i18n="footer.deskripsi">Pengrajin dan eksportir produk rotan dari Cirebon, Jawa Barat. Cek stok, harga, ongkir, dan estimasi tiba langsung di website ini.</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h2 data-i18n="footer.menu">Menu</h2>
+                    <ul>
+                        <li><a href="#beranda" data-i18n="nav.beranda">Beranda</a></li>
+                        <li><a href="#produk" data-i18n="nav.produk">Produk</a></li>
+                        <li><a href="#pesan" data-i18n="nav.pesan">Hitung pesanan</a></li>
+                        <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+                        <li><a href="#kontak" data-i18n="nav.kontak">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-4">
+                    <h2 data-i18n="footer.hubungi">Hubungi kami</h2>
+                    <ul>
+                        <li><i class="bi bi-whatsapp"></i> <span data-telepon></span></li>
+                        <li><i class="bi bi-geo-alt"></i> Plumbon, Cirebon</li>
+                        <li><i class="bi bi-clock"></i> <span data-i18n="footer.jam">Senin - Sabtu, 08.00 - 17.00</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bawah" data-i18n="footer.hak">&copy; Ridwan Rotan Cirebon. Seluruh hak dilindungi.</div>
+        </div>
+    </footer>
+
+<a class="tombol-wa-melayang" data-wa-link href="#" target="_blank" rel="noopener" aria-label="Chat WhatsApp" data-i18n-aria-label="wa.chat"><i class="bi bi-whatsapp"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/foto.js"></script>
+<script src="js/bahasa.js"></script>
+<script src="js/app.js"></script>
+<script src="js/rute.js"></script>
+</body>
+</html>
